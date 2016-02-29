@@ -1,0 +1,386 @@
+
+
+body, html {
+	font-family: "Oswald";
+	height: 100%;
+	background-color: #efeded;
+}
+
+i {
+	color: black;
+	cursor: pointer;
+}
+
+h1, h2 {
+	text-align: center;
+	margin: 20px auto;
+}
+
+p, h1, h2, h3, h4, h5, a, label {
+	color: black;
+	font-weight: 50;
+	letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+.modal-content {
+	background-color: white;
+}
+
+
+
+
+/* MASONRY */
+
+.grid {
+	margin: 0px auto;
+	width: 90%;
+	margin-top: 30px;
+}
+
+.grid-sizer, .grid-item { 
+	width: 18%;
+	margin: 1%; 
+	box-shadow: 0 0 10px 10px gray;
+	border-radius: 10px;
+}
+
+.grid-item img {
+	width: 100%;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }
+	  
+.details {
+	margin: 10px 2px;
+}
+
+.fa-heart {
+	cursor: pointer;
+
+}
+
+
+/* INDEX PAGE */
+
+.header {
+	width: 100%;
+	height: 60px;
+	background: black;
+	opacity: 0.9;
+	z-index: 999;
+}
+
+#rct-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+
+.btn-header {
+	float: right;
+	margin: 0px 10px;
+	height: 60px;
+	border: none;
+	background-color: black;
+}
+
+.public-btn-header {
+	float: right;
+	margin: 0px 10px;
+	height: 60px;
+	border: none;
+	background-color: black;
+}
+
+.public-container {
+	padding-top: 50px;
+}
+
+.content-container {
+	padding-top: 80px;
+}
+
+
+
+.title {
+	font-size: 2em;
+	font-family: "Oswald";
+	float: left;
+	line-height: 50px;
+	margin: 5px;
+	margin-left: 30px;
+	color: white;
+}
+
+.public-title {
+	font-size: 2em;
+	font-family: "Oswald";
+	float: left;
+	line-height: 50px;
+	margin: 5px;
+	margin-left: 30px;
+	color: white;
+}
+
+.title-img {
+	float: left;
+	height: 50px;
+	margin: 5px 2px 5px 20px;
+}
+
+.main-title {
+	padding-top: 70px;
+	width: 45%;
+	margin: 0px auto;
+}
+
+.main-title h1 {
+	color: white;
+	font-weight: 100;
+	font-size: 3em;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.main-title h2 {
+	font-size: 1.5em;
+	color: white;
+	text-shadow: 5px 5px 5px #000000;
+}
+
+
+.form-element {
+	margin-top: 30px;
+}
+
+
+button a, a:hover, a:active, a:visited, a:focus {
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+}
+
+
+
+
+.alert {
+	margin: 10px;
+}
+
+/* PIN STYLING */
+
+.details {
+	margin: 3px 5px;
+}
+
+
+/* PROFILE FORMS */
+
+.user-details {
+	width: 75%;
+	margin: 50px auto;
+}
+
+.user-details h4 {
+	text-align: center;
+}
+
+.input-box {
+	width: 350px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.input-box input {
+	margin-right: 10px;
+	margin-top: 20px;
+	width: 150px;
+	height: 30px;
+}
+
+.input-box button {
+	height: 30px;
+
+}
+
+
+
+
+/* GENERAL FORM STYLING ON REDUCED WIDTH */
+
+
+@media (max-width: 1000px) {
+
+.grid-sizer, .grid-item { 
+	width: 23%;
+	margin: 1%; 
+	box-shadow: 0 0 10px 10px gray;
+	border-radius: 10px;
+}
+
+
+
+}
+
+/*NAV BUTTONS AND TITLE ON REDUCED WIDTH */
+
+@media (max-width: 800px) {
+
+/* Masonry Resize */
+
+.grid-sizer, .grid-item { 
+	width: 31%;
+	margin: 1%; 
+	box-shadow: 0 0 10px 10px gray;
+	border-radius: 10px;
+}
+
+
+.main-title {
+	width: 60%;
+}
+
+#title-bundle {
+	margin: 0px auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	overflow: auto;
+}
+
+#button-bundle {
+	margin: 0px auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+#rct-header {
+	height: 120px;
+}
+
+
+#rct-btn {
+	float: none;
+	margin: 10px;
+	height: 40px;
+	border: none;
+	opacity: 0.9;
+
+}
+
+
+
+#rct-title {
+	font-size: 2em;
+	float: none;
+	line-height: 50px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+#rct-title-img {
+	float: none;
+	height: 50px;
+	margin: -10px 2px 5px 20px;
+	display: inline-block;
+}
+
+.content-container {
+	padding-top: 140px;
+}
+
+
+
+
+}
+
+
+@media (max-width: 550px) {
+
+.grid-sizer, .grid-item { 
+	width: 99%;
+	margin: 10px; 
+	box-shadow: 0 0 10px 10px gray;
+	border-radius: 10px;
+}
+
+.public-btn-header {
+	float: none;
+	margin: 0px;
+	height: 60px;
+	border: none;
+	opacity: 0.9;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.public-title {
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+}
+
+.main-title {
+	width: 80%;
+}
+
+#rct-header {
+	height: 270px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.header {
+	height: 180px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+#rct-btn {
+	float: none;
+	height: 40px;
+	border: none;
+	opacity: 0.9;
+	display: block;
+	width: 95%;
+	margin: 10px auto;
+
+}
+
+#signup-container {
+	width: 90%;
+}
+
+#signup-form {
+	width: 95%;
+	left: 2.5%;
+}
+
+.overlay {
+	width: 90%;
+	top: 20%;
+	left: 5%;
+
+}
+
+.content-container {
+	padding-top: 20px;
+}
+
+.public-container {
+	padding-top: 20px;
+}
+
+
+
+}
+
+

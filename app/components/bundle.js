@@ -1,0 +1,1 @@
+console.error("ReferenceError: [BABEL] C:\\Users\\Chrs\\pinterest\\app\\components\\handler.js: Unknown option: C:\\Users\\Chrs\\pinterest\\node_modules\\react\\react.js.Children while parsing file: C:\\Users\\Chrs\\pinterest\\app\\components\\handler.js");
