@@ -91,7 +91,8 @@ var RecentPin = React.createClass({
             }
 
             var left = {
-              float: "left"
+              float: "left",
+              color: "#1c2ac9"
             }
 
             
@@ -101,11 +102,9 @@ var RecentPin = React.createClass({
               marginTop: "2px"
             }
 
-            
+            var href = "/user/" + "938484848"
 
-
-  
-
+          
 
        return (
         <div className="grid-item" onMouseOver={this.extendTitle} onMouseOut={this.reduceTitle}>
@@ -114,7 +113,7 @@ var RecentPin = React.createClass({
         <p  style={this.state.titleStyle}> {this.state.title} </p>
         
         <div style={clear}>
-        <p style={left}> {this.props.data.user} </p>
+        <a className="user-link" href={href} style={left}> {this.props.data.user} </a>
         <p style={inline}> {this.props.data.upVotes.length} </p> <i onClick={this.addVote} style={inline} className="fa fa-heart"></i>
         </div>
         </div>

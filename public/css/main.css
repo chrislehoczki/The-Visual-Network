@@ -53,6 +53,10 @@ h1 {
 	border-radius: 10px 10px 0px 0px;
 }
 
+.user-link {
+	color: black;
+}
+
 .grid-item--width2 { width: 160px; }
 .grid-item--height2 { height: 140px; }
 	  
@@ -62,7 +66,6 @@ h1 {
 
 .fa-heart {
 	cursor: pointer;
-
 }
 
 
@@ -106,8 +109,6 @@ h1 {
 .content-container {
 	padding-top: 80px;
 }
-
-
 
 .title {
 	font-size: 2em;

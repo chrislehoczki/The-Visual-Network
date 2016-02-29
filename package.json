@@ -19,6 +19,8 @@
   "author": "Chris Phillips",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
     "browserify": "^13.0.0",

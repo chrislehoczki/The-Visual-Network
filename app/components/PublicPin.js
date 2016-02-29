@@ -71,15 +71,16 @@ var PublicPin = React.createClass({
             var inline = {
              display: "inline",
              float: "right",
-             margin: "4px",
-             marginRight: "6px",
+             margin: "2px",
+             marginRight: "5px",
              overflow: "hidden"
             }
 
             var left = {
               float: "left",
               width: "80%",
-              height: "10px"
+              height: "10px",
+              color: "#1c2ac9"
             }
 
             var clear = {
@@ -87,15 +88,17 @@ var PublicPin = React.createClass({
               marginTop: "2px"
             }
 
+            var href = "/user/" + this.props.data.id
+
        return (
 
         <div className="grid-item" onMouseOver={this.extendTitle} onMouseOut={this.reduceTitle}>
         <img onError={this.imgError} key= {this.props.data.title + "," + this.props.data.url} src={this.state.src} />
         <div className="details">
-        <p  style={this.state.titleStyle}> {this.state.title} </p>
+        <p style={this.state.titleStyle}> {this.state.title} </p>
         
         <div style={clear}>
-        <p style={left}> {this.props.data.user} </p>
+        <a className="user-link" href={href} style={left}> {this.props.data.user} </a>
         <p style={inline}> {this.props.data.upVotes.length} </p> <i onClick={this.loginMessage} style={inline} className="fa fa-heart"></i>
         </div>
         </div>

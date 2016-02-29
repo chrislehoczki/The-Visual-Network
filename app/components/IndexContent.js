@@ -53,6 +53,11 @@ var IndexContent = React.createClass({
 
     },
 
+    loadUserData: function() {
+
+
+    },
+
     render: function() {
 
       var component = this;

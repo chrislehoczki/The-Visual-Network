@@ -1,14 +1,14 @@
-# BookShare
+# The Visual Network
 
-## A book sharing app built with Express, MongoDB, ReactJS and Google Books API.
+## A Pinterest clone that allows users to add their favourite images, share them on a MasonryJS wall for others to view, and upvote other user's images.
 
 ## Overview
 
-Add books that you own for other users to request. Search other users books and request them. Send messages to connect with eachother.
+Login with username or with Twitter, add your own images, upvote others, and share them with friends. 
 
 
 ## Technologies
 
 NodeJS with Express middleware, Mongoose, PassportJS for authentication, and Isomorphic ReactJS for front and back end.
 
-Makes use of Google Books API to collect book data.
+Masonry JS for image styling.

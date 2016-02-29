@@ -158,13 +158,8 @@ module.exports = function (app, passport) {
 						var markup = ReactDOMServer.renderToString(IndexHeader({userProps: result, title: "PinStar", type: "user"}));
 						res.render("user", {userProps: JSON.stringify(result)});
 					});	
-
-
-			
 			
 		});
-
-
 
 
 
@@ -198,8 +193,6 @@ module.exports = function (app, passport) {
 	//////////////////////////////						
 	//////USER DETAIL CHANGES/////
 	//////////////////////////////	
-
-
 
 		//ADD CITY AND STATE
 	app.route("/api/userinfo")

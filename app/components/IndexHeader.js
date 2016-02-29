@@ -48,7 +48,7 @@ var Header = React.createClass({
           var contentContainer;
           
         if (component.props.type === "index") {
-          return <IndexContent showMessage={component.showMessage} />;
+          return <IndexContent showMessage={component.showMessage} pins={component.props.pins}/>;
         }
         else if (component.props.type === "user") {
           return <UserContent showMessage={component.showMessage} user={component.props.userProps}/>
