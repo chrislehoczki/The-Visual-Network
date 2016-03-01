@@ -4,7 +4,7 @@ var React = require('react');
 var SignupModal = require("./SignupModal.js")
 var LoginModal = require("./LoginModal.js")
 var ajaxFunctions = require("../common/ajax-functions.js")
-
+var $ = require('jquery')
 var PublicPin = require("./PublicPin.js")
 var IndexContent = React.createClass({
 
@@ -28,7 +28,9 @@ var IndexContent = React.createClass({
         data= JSON.parse(data)
         console.log(data)
         component.setState({pins: data}, function() {
+          $(".grid").hide()
           component.loadMasonry()
+          $(".grid").fadeIn(3000)
           console.log("loading masonry")
       })
       })
@@ -45,12 +47,15 @@ var IndexContent = React.createClass({
           
             });
 
+           
+
                 // element argument can be a selector string
                 //   for an individual elemen
 
                 imagesLoaded( '.grid' ).on( 'progress', function() {
         // layout Masonry after each image loads
         msnry.layout();
+        
       });
 
 

@@ -17,7 +17,10 @@ var IndexContent = React.createClass({
 
     componentDidMount: function() {
      
+
+      $(".grid").hide()
       this.loadMasonry()
+      $(".grid").fadeIn(3000)
 
     },
 
