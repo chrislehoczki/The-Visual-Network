@@ -15,7 +15,9 @@ var MyPins = React.createClass({
     },
 
     componentDidMount: function() {
+       $(".grid").hide()
       this.getMyPins()
+      $(".grid").fadeIn(3000)
     },
 
     getMyPins: function() {
@@ -25,9 +27,9 @@ var MyPins = React.createClass({
         data= JSON.parse(data)
         console.log(data)
         component.setState({pins: data.pins}, function() {
-                    $(".grid").hide()
+                   
                   component.reloadMasonry()
-          $(".grid").fadeIn(3000)
+          
         })
       })
 

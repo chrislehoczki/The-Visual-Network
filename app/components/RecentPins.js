@@ -14,7 +14,10 @@ var RecentPins = React.createClass({
     },
 
     componentDidMount: function() {
+            $(".grid").hide()
       this.getAllPins()
+      $(".grid").fadeIn(3000)
+      
     },
 
     getAllPins: function() {

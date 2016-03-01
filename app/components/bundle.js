@@ -743,84 +743,85 @@ var UserPin = require("./UserPin.js");
 var ajaxFunctions = require("../common/ajax-functions.js");
 
 var MyPins = React.createClass({
-  displayName: "MyPins",
+    displayName: "MyPins",
 
 
-  getInitialState: function getInitialState() {
-    return {
-      showModal: false,
-      pins: []
-    };
-  },
+    getInitialState: function getInitialState() {
+        return {
+            showModal: false,
+            pins: []
+        };
+    },
 
-  componentDidMount: function componentDidMount() {
-    this.getMyPins();
-  },
-
-  getMyPins: function getMyPins() {
-    var url = "/api/getuserpins";
-    var component = this;
-    ajaxFunctions.ajaxRequest("GET", url, function (data) {
-      data = JSON.parse(data);
-      console.log(data);
-      component.setState({ pins: data.pins }, function () {
+    componentDidMount: function componentDidMount() {
         $(".grid").hide();
-        component.reloadMasonry();
+        this.getMyPins();
         $(".grid").fadeIn(3000);
-      });
-    });
-  },
+    },
 
-  showMessage: function showMessage() {
-    this.setState({ showModal: true });
-  },
+    getMyPins: function getMyPins() {
+        var url = "/api/getuserpins";
+        var component = this;
+        ajaxFunctions.ajaxRequest("GET", url, function (data) {
+            data = JSON.parse(data);
+            console.log(data);
+            component.setState({ pins: data.pins }, function () {
 
-  hideMessage: function hideMessage() {
-    this.setState({ showModal: false });
-  },
+                component.reloadMasonry();
+            });
+        });
+    },
 
-  reloadMasonry: function reloadMasonry() {
+    showMessage: function showMessage() {
+        this.setState({ showModal: true });
+    },
 
-    var elem = document.querySelector('.grid');
-    var msnry = new Masonry(elem, {
-      // options
-      itemSelector: '.grid-item',
-      transitionDuration: '0.8s'
-    });
+    hideMessage: function hideMessage() {
+        this.setState({ showModal: false });
+    },
 
-    imagesLoaded('.grid').on('progress', function () {
-      // layout Masonry after each image loads
-      msnry.layout();
-    });
-  },
+    reloadMasonry: function reloadMasonry() {
 
-  render: function render() {
-    var component = this;
+        var elem = document.querySelector('.grid');
+        var msnry = new Masonry(elem, {
+            // options
+            itemSelector: '.grid-item',
+            transitionDuration: '0.8s'
+        });
 
-    var addPin = {
-      width: "300px",
-      padding: "10px",
-      margin: "40px auto",
-      display: "block"
-    };
-    return React.createElement(
-      "div",
-      null,
-      React.createElement(
-        "button",
-        { style: addPin, className: "btn btn-primary", onClick: this.showMessage },
-        " Add Pin "
-      ),
-      React.createElement(
-        "div",
-        { className: "grid" },
-        this.state.pins.map(function (pin) {
-          return React.createElement(UserPin, { reload: component.reloadMasonry, getMyPins: component.getMyPins, key: pin.title + "," + pin.url, data: pin });
-        })
-      ),
-      React.createElement(AddPinModal, { getMyPins: component.getMyPins, showMessage: this.state.showModal, hideMessage: this.hideMessage })
-    );
-  }
+        imagesLoaded('.grid').on('progress', function () {
+            // layout Masonry after each image loads
+            msnry.layout();
+        });
+    },
+
+    render: function render() {
+        var component = this;
+
+        var addPin = {
+            width: "300px",
+            padding: "10px",
+            margin: "40px auto",
+            display: "block"
+        };
+        return React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "button",
+                { style: addPin, className: "btn btn-primary", onClick: this.showMessage },
+                " Add Pin "
+            ),
+            React.createElement(
+                "div",
+                { className: "grid" },
+                this.state.pins.map(function (pin) {
+                    return React.createElement(UserPin, { reload: component.reloadMasonry, getMyPins: component.getMyPins, key: pin.title + "," + pin.url, data: pin });
+                })
+            ),
+            React.createElement(AddPinModal, { getMyPins: component.getMyPins, showMessage: this.state.showModal, hideMessage: this.hideMessage })
+        );
+    }
 });
 
 module.exports = MyPins;
@@ -1336,7 +1337,9 @@ var RecentPins = React.createClass({
   },
 
   componentDidMount: function componentDidMount() {
+    $(".grid").hide();
     this.getAllPins();
+    $(".grid").fadeIn(3000);
   },
 
   getAllPins: function getAllPins() {
