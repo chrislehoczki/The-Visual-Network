@@ -397,10 +397,12 @@ var IndexContent = React.createClass({
     },
 
     componentDidMount: function componentDidMount() {
+
         this.getAllPins();
     },
 
     getAllPins: function getAllPins() {
+
         var url = "/api/getallpins";
         var component = this;
         ajaxFunctions.ajaxRequest("GET", url, function (data) {
@@ -408,6 +410,7 @@ var IndexContent = React.createClass({
             console.log(data);
             component.setState({ pins: data }, function () {
                 component.loadMasonry();
+                console.log("loading masonry");
             });
         });
     },

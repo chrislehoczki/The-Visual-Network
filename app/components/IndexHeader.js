@@ -42,7 +42,7 @@ var Header = React.createClass({
 
     render: function() {
       var component = this;
-
+      
       //THIS FUNCTION DECLARES WHETHER IT IS INDEX PAGE OR SPECIFIC USER PAGE THAT IS RENDERED
       function changeContent () {
           var contentContainer;

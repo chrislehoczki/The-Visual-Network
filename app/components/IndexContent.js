@@ -16,10 +16,12 @@ var IndexContent = React.createClass({
     },
 
     componentDidMount: function() {
+
       this.getAllPins()
     },
 
     getAllPins: function() {
+
        var url = "/api/getallpins"
       var component = this;
       ajaxFunctions.ajaxRequest("GET", url, function(data) {
@@ -27,7 +29,7 @@ var IndexContent = React.createClass({
         console.log(data)
         component.setState({pins: data}, function() {
           component.loadMasonry()
-          
+          console.log("loading masonry")
       })
       })
 
@@ -50,6 +52,7 @@ var IndexContent = React.createClass({
         // layout Masonry after each image loads
         msnry.layout();
       });
+
 
     },
 
